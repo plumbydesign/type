@@ -1,0 +1,61 @@
+class FallingKeys {
+
+  float x;
+  float y=110;
+  float vY=0.75;
+  float InArray;
+  String message = "abcdefghijklmonpqrstuvwxzy"; //where the letter come from
+
+
+  FallingKeys (float xpos, int ArrayN ) {
+    x=xpos;
+    InArray=ArrayN;
+  }
+
+  void render () {
+
+    fill (255);  //fill for rectangles
+    strokeWeight(5);
+    stroke (39,170,225);
+    rect(x, y, 65, 45, 15); 
+
+    color cfill = color(50, 55, 100);  // fill for text
+    fill(cfill);
+
+    textFont(kFont,25);  
+    textAlign(CENTER);
+    char chosenC = message.charAt(int (InArray)); //code gets letter here
+  
+  
+  text (chosenC, x+29, y+30);
+  }
+
+
+//checks if the right letter was input
+  boolean addPoint () {
+    char chosenC = message.charAt(int (InArray));
+
+    if (key == chosenC && y<510) {
+      resetKey(); 
+      return true;
+       } else {
+      return false;
+    }
+  }
+
+//resets locations and picks a new letters
+  void resetKey () { 
+    InArray= random (0, 25);
+    y=110;
+  }
+
+//only moves the key if inbounds else reset
+  void move () {
+    if (y<450) {
+      y += vY;
+    } else {
+
+      resetKey();
+    }
+  }
+}
