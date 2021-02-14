@@ -1,6 +1,6 @@
 # TypeType Madness
 
-#Java in Processing
+Java in Processing
 # A game aimed at building typing skill
 # To play download Processing IDE
-#Download both files
+Download both files
