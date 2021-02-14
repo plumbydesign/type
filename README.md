@@ -1,3 +1,6 @@
-# Java in Prcoessing
+# TypeType Madness
 
-#Keyboard used
+#Java in Processing
+# A game aimed at building typing skill
+# To play download Processing IDE
+#Download both files
